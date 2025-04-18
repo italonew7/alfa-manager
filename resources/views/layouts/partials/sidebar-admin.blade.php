@@ -12,6 +12,11 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link text-white d-flex align-items-center" href="{{ route('cupom.criar') }}">
+                <i class="bi bi-tag-fill me-2"></i> Cupom
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link text-white d-flex align-items-center" href="#">
                 <i class="bi bi-people-fill me-2"></i> Usuários
             </a>

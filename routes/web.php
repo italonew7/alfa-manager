@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoEspecialController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CuponsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Middleware\AdminMiddleware;
 use App\Http\Controllers\RecuperarSenhaController;
@@ -59,3 +60,6 @@ Route::get('/esqueci-senha', [RecuperarSenhaController::class, 'formSolicitar'])
 Route::post('/esqueci-senha', [RecuperarSenhaController::class, 'enviarLink'])->name('senha.enviar');
 Route::get('/redefinir-senha/{token}', [RecuperarSenhaController::class, 'formRedefinir'])->name('senha.redefinir');
 Route::post('/redefinir-senha', [RecuperarSenhaController::class, 'redefinir'])->name('senha.redefinir');
+
+Route::get('/cupom/criar', [CuponsController::class, 'criar'])->name('cupom.criar');
+Route::post('/cupom/salvar', [CuponsController::class, 'salvar'])->name('cupom.salvar');
